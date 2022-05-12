@@ -1,0 +1,115 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+  
+      <div class="col-12 col-lg-10 col-xl-10">
+        <div class="header mt-md-5">
+          <div
+            class="
+              header-body
+              d-flex
+              justify-content-between
+              align-items-center
+              pt-0
+            "
+          >
+            <div class="row align-items-center">
+              <div class="col">
+                <h1 class="header-title">Ajouter Joueur</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-lg container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-12 col-xl-12 form-label-custom">
+          <!-- Form -->
+          <form [formGroup]="FormGroup"  class="py-6">
+            <div class="row">
+              <div class="col-8">
+                <div class="row justify-content-end mb-3">
+  
+                </div>
+                <div class="row justify-content-end mb-3">
+                  <div class="form-group col-8">
+                    <label class="form-label">Nom de l'équipe</label>
+  
+                    <!-- Input -->
+                    <select class="form-control" #nomequipe formControlName="nomequipe"
+                    >
+                      <option value="" disabled selected>
+                          selectionner Equipe
+                        </option>
+                      <option *ngFor="let u of allequipe" [value]="u.nom">{{u.nom}}</option>
+
+                   </select> 
+                
+                    
+                  </div>
+                </div>
+                <div class="row justify-content-end mb-3">
+                    <div class="form-group col-8">
+                      <label class="form-label">Nom & prénom</label>
+    
+                      <!-- Input -->
+                      <input type="text" class="form-control" #nomprenom [(ngModel)]="joueur.nomprenom"
+                       formControlName="nomprenom" required
+                      >
+                    </div>
+                  </div>
+                <div class="row justify-content-end mb-3">
+                  <div class="form-group col-8">
+                    <!-- Label -->
+                    <label class="form-label">Age</label>
+  
+                    <!-- Input -->
+                    <input type="number" class="form-control" #age formControlName="age"
+                    [(ngModel)]="joueur.age" required/>
+                  </div>
+                </div>
+  
+                <div class="row justify-content-end mb-3">
+                  <div class="form-group col-8">
+                    <!-- Label -->
+                    <label class="form-label">Poste</label>
+  
+                    <!-- Input -->
+                    <input type="text" class="form-control"
+                    [(ngModel)]="joueur.poste" #poste formControlName="poste" required/>
+                  </div>
+                </div>
+
+              
+              
+                
+                
+
+              
+              
+               
+             
+  
+                <div class="row align-items-center justify-content-end">
+                  <div class="col-auto">
+                    <!-- Button -->
+                    <button class="btn btn-lg btn-white" type="reset">
+                      Annuler
+                    </button>
+                  </div>
+  
+                  <div class="col-auto">
+                    <!-- Button -->
+                    <a class="btn btn-lg btn-primary" (click)="editjouer()"
+                      >Continue</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

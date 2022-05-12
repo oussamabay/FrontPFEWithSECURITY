@@ -1,0 +1,163 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-10">
+        <div class="header mt-md-5">
+          <div
+            class="
+              header-body
+              d-flex
+              justify-content-between
+              align-items-center
+              pt-0
+            "
+          >
+            <div class="row align-items-center">
+              <div class="col">
+                <h1 class="header-title">Création une nouvelle partie</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container-lg container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-12 col-xl-12 form-label-custom">
+          <!-- Form -->
+  
+          <div class="row">
+            <div class="col-xl-12">
+              
+  
+              <form [formGroup]="FormGroup" >
+                <div >
+                  <div class="row mb-3">
+                    <div class="form-group col-md-6 col-lg-6">
+                      <!-- Label -->
+                      <label class="form-label">Equipe A</label>
+                      <select class="form-control"  formControlName="equipea"
+                      >
+                        <option value="" disabled selected>
+                            selectionner Equipe
+                          </option>
+                        <option *ngFor="let u of allequipe" [value]="u.nom">{{u.nom}}</option>
+
+                     </select> 
+                     
+                      <!-- Input -->
+                    
+                    </div>
+                    <div class="form-group col-md-6 col-lg-6">
+                      <!-- Label -->
+                      <label class="form-label">Equipe B</label>
+                      <select class="form-control"  formControlName="equipeb"
+                      >
+                        <option value="" disabled selected>
+                            selectionner Equipe
+                          </option>
+                        <option *ngFor="let u of allequipe" [value]="u.nom">{{u.nom}}</option>
+
+                     </select> 
+                     
+                    
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="form-group col-md-6 col-lg-6">
+                      <label class="form-label">Date</label>
+                      <!-- Input -->
+                      <input
+                        type="date"
+                        class="form-control"
+                        formControlName="date"
+                      />
+                      
+                    </div>
+                    <div class="form-group col-md-6 col-lg-6">
+                      <label class="form-label">Heures</label>
+                      <div class="mb-3">
+                    <input type="time"
+                    class="form-control"
+                    formControlName="heure"
+
+                    >  
+                    </div>
+                      
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="form-group col-md-4 col-lg-4">
+                      <!-- Label -->
+                      <label class="form-label">Journée</label>
+  
+                      <!-- Input -->
+                      <input
+                        type="number"
+                        class="form-control"
+                        formControlName="journe"
+
+                      />
+                      
+                    </div>
+                    <div class="form-group col-md-4 col-lg-4">
+                      <!-- Label -->
+                      <label class="form-label">Stade</label>
+  
+                      <!-- Input -->
+                      <select class="form-control"  formControlName="stade"
+                      >
+                        <option value="" disabled selected>
+                            selectionner stade
+                          </option>
+                        <option *ngFor="let u of allstade" [value]="u.nomstade">{{u.nomstade}}</option>
+
+                     </select> 
+                      </div>
+                    <div class="form-group col-md-4 col-lg-4">
+                      <!-- Label -->
+                      <label class="form-label">Arbitre</label>
+  
+                     <select class="form-control" formControlName="arbitre">
+                        <option value="" disabled selected>
+                            selectionner arbitre
+                          </option>
+                        <option *ngFor="let u of allarbitre" [value]="u.nomprenomar">{{u.nomprenomar}}</option>
+
+                     </select> 
+                    </div>
+                  </div>
+                 
+                </div>
+  
+                
+              </form>
+            </div>
+  
+            <div class="col-12 mt-10">
+              <hr class="mt-5" />
+              <div class="row align-items-center justify-content-end">
+                <div class="col-auto">
+                  <!-- Button -->
+                  <button
+                    class="btn btn-lg btn-white"
+                    type="reset"
+                  >
+                    Retour
+                  </button>
+                </div>
+  
+                <div class="col-auto">
+                  <button class="btn btn-lg btn-primary" (click)="addpartie()">
+                  
+                    ajouter
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
