@@ -1,0 +1,97 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+  
+      <div class="col-12 col-lg-10 col-xl-10">
+        <div class="header mt-md-5">
+          <div
+            class="
+              header-body
+              d-flex
+              justify-content-between
+              align-items-center
+              pt-0
+            "
+          >
+            <div class="row align-items-center">
+              <div class="col">
+                <h1 class="header-title">Ajouter Equipe</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-lg container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-12 col-xl-12 form-label-custom">
+          <!-- Form -->
+          <form [formGroup]="FormGroup"  class="py-6">
+            <div class="row">
+              <div class="col-8">
+                <div class="row justify-content-end mb-3">
+  
+                </div>
+                <div class="row justify-content-end mb-3">
+                  <div class="form-group col-8">
+                    <h2 class="header-title">Equipe :</h2>
+                    <hr class="mb-5" />
+                    <label class="form-label">Nom de l'équipe</label>
+  
+                    <!-- Input -->
+                    <input type="text" class="form-control" #nom formControlName="nom" required
+                    >
+                  </div>
+                </div>
+                <div class="row justify-content-end mb-3">
+                  <div class="form-group col-8">
+                    <!-- Label -->
+                    <label class="form-label">Entraineur</label>
+  
+                    <!-- Input -->
+                    <input type="text" class="form-control" #entraineur formControlName="entraineur" required/>
+                  </div>
+                </div>
+  
+                <div class="row justify-content-end mb-3">
+                  <div class="form-group col-8">
+                    <!-- Label -->
+                    <label class="form-label">Date</label>
+  
+                    <!-- Input -->
+                    <input type="date" class="form-control" #date formControlName="date" required/>
+                  </div>
+                </div>
+
+              
+              
+                
+                
+
+              
+              
+               
+             
+  
+                <div class="row align-items-center justify-content-end">
+                  <div class="col-auto">
+                    <!-- Button -->
+                    <button class="btn btn-lg btn-white" type="reset">
+                      Annuler
+                    </button>
+                  </div>
+  
+                  <div class="col-auto">
+                    <!-- Button -->
+                    <a class="btn btn-lg btn-primary" (click)="addequipe()"
+                      >Continue</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
