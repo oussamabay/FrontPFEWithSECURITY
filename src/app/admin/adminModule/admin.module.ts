@@ -1,4 +1,3 @@
-import { EditClientComponent } from './../clients/edit-client/edit-client.component';
 
 import { NgModule } from "@angular/core";
 import { AdminRoutingModule } from "./admin-routing.module";
@@ -6,12 +5,8 @@ import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 // components
-import { HumainRessourcesComponent } from "../humain-ressources/humain-ressources.component";
 import { DashboardComponent } from "../dashboard/dashboard.component";
 
-import { ClientsComponent } from "./../clients/clients.component";
-
-import { AddClientsComponent } from "../clients/add-clients/add-clients.component";
 
 //search pipe
 import { Ng2SearchPipeModule } from "ng2-search-filter";
@@ -23,13 +18,6 @@ import { DialogModule } from "primeng/dialog";
 import { TooltipModule } from "primeng/tooltip";
 import { ConfirmDialogModule } from "primeng/confirmdialog";
 
-import { AddRessourcesComponent } from "../humain-ressources/add-ressources/add-ressources.component";
-import { EditRessourcesComponent } from '../humain-ressources/edit-ressources/edit-ressources.component';
-
-import { BonDeCommandeComponentClinet } from '../clients/bon-de-commande/bon-de-commande.component';
-import { AddBonCommandeClientComponent } from '../clients/add-bon-commande-client/add-bon-commande-client.component';
-import { BlclientComponent } from '../clients/blclient/blclient.component';
-import { FactureComponent } from '../clients/facture/facture.component';
 import { ArbitreComponent } from '../arbitre/arbitre.component';
 import { StadeComponent } from '../stade/stade.component';
 import { EquipeComponent } from '../equipe/equipe.component';
@@ -45,9 +33,12 @@ import { EditarbitreComponent } from '../arbitre/editarbitre/editarbitre.compone
 import { EdistadeComponent } from '../stade/edistade/edistade.component';
 import { EditequipeComponent } from '../equipe/editequipe/editequipe.component';
 import { EditjoueurComponent } from '../joueur/editjoueur/editjoueur.component';
+import { AddvisiteurComponent } from 'src/app/auth/addvisiteur/addvisiteur.component';
+import { VisiteurComponent } from '../visiteur/visiteur.component';
 
 @NgModule({
   declarations: [
+    AddvisiteurComponent,
     EquipeComponent,
     AddequipeComponent,
     EditequipeComponent,
@@ -64,18 +55,7 @@ import { EditjoueurComponent } from '../joueur/editjoueur/editjoueur.component';
     AddpartieComponent,
     ScoreComponent,
     DashboardComponent,
-    HumainRessourcesComponent,
-    AddRessourcesComponent,
-    EditRessourcesComponent,
-    ClientsComponent,
-    AddClientsComponent,
-    BonDeCommandeComponentClinet,
-    AddBonCommandeClientComponent,
-    EditClientComponent,
-    EditRessourcesComponent,
-    EditClientComponent,
-    BlclientComponent,
-    FactureComponent,
+    VisiteurComponent
   ],
   imports: [
     CommonModule,

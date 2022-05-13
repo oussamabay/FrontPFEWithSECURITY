@@ -1,6 +1,7 @@
 import { AuthGuard } from "./auth/guard/auth.guard";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { AddvisiteurComponent } from "./auth/addvisiteur/addvisiteur.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,14 @@ const routes: Routes = [
       ),
     canActivate: [AuthGuard],
   },
+  {
+    path: "visiteur",
+    loadChildren: () =>
+      import("src/app/visiteur/visiteurModule/visiteur.module").then(
+        (m) => m.VisiteurModule
+      ),
+    canActivate: [AuthGuard],
+  },
 
 
 
@@ -26,28 +35,13 @@ const routes: Routes = [
 
 
 
+  {path:"addvisiteur",component:AddvisiteurComponent},
 
 
 
 
 
   
-  {
-    path: "customer",
-    loadChildren: () =>
-      import("src/app/customer/customerModule/customer.module").then(
-        (m) => m.CustomerModuler
-      ),
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "Gestionnaire_Production",
-    loadChildren: () =>
-      import("src/app/gestionproduction/gestionproductionModule/gestionproduction.module").then(
-        (m) => m.GestionProductionModule
-      ),
-    canActivate: [AuthGuard],
-  },
   { path: "", redirectTo: "authentication/login", pathMatch: "full" },
   { path: "**", redirectTo: "authentication" },
 ];

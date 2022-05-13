@@ -55,4 +55,8 @@ this.Arbiterservice.archiver(this.arbiter.id).subscribe((res)=>{
 
 })
 }
+cancel = () => {
+  this.ConfirmationService.close();
+};
+
 }

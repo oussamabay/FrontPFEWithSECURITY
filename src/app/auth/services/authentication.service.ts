@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -26,6 +26,14 @@ export class AuthenticationService {
     return this.currentUserSubject.value;
   }
 
+  getbyemail(email) {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    headers = headers.set("Authorization", 'Bearer ' + user.token);
+    return this.http.get(CONFIG.URL +  "visiteur/affichagebyemail?email="+email,{ headers: headers})}
+  
+
   login(credentials) {
     return this.http.post<any>(`${CONFIG.URL}auth/login`, credentials).pipe(
       map((user) => {
@@ -38,6 +46,18 @@ export class AuthenticationService {
       })
     );
   }
+addvisiteur(contact){
+  let headers = new HttpHeaders();
+
+  headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+
+ /* const user = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    headers = headers.set("Authorization", 'Bearer ' + user.token);
+   */
+   return this.http.post(CONFIG.URL +  "visiteur/ajouter",contact,{ headers:headers ,responseType: 'text' })}
+  
 
   logout() {
     // remove user from local storage to log user out

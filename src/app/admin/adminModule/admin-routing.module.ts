@@ -3,19 +3,8 @@ import { Component, NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 //Components
-import { AddClientsComponent } from "../clients/add-clients/add-clients.component";
-import { ClientsComponent } from "../clients/clients.component";
-import { EditClientComponent } from '../clients/edit-client/edit-client.component';
 import { DashboardComponent } from "../dashboard/dashboard.component";
 
-import { HumainRessourcesComponent } from "../humain-ressources/humain-ressources.component";
-import { AddRessourcesComponent } from "../humain-ressources/add-ressources/add-ressources.component";
-
-import { EditRessourcesComponent } from '../humain-ressources/edit-ressources/edit-ressources.component';
-import { BonDeCommandeComponentClinet } from "../clients/bon-de-commande/bon-de-commande.component";
-import { AddBonCommandeClientComponent } from "../clients/add-bon-commande-client/add-bon-commande-client.component";
-import { BlclientComponent } from "../clients/blclient/blclient.component";
-import { FactureComponent } from "../clients/facture/facture.component";
 import { ArbitreComponent } from "../arbitre/arbitre.component";
 import { StadeComponent } from "../stade/stade.component";
 import { EquipeComponent } from "../equipe/equipe.component";
@@ -31,6 +20,8 @@ import { EditarbitreComponent } from "../arbitre/editarbitre/editarbitre.compone
 import { EdistadeComponent } from "../stade/edistade/edistade.component";
 import { EditequipeComponent } from "../equipe/editequipe/editequipe.component";
 import { EditjoueurComponent } from "../joueur/editjoueur/editjoueur.component";
+import { AddvisiteurComponent } from "src/app/auth/addvisiteur/addvisiteur.component";
+import { VisiteurComponent } from "../visiteur/visiteur.component";
 
 
 const routes: Routes = [
@@ -52,19 +43,7 @@ const routes: Routes = [
   {path:"joueur",component:JoueurComponent},
   {path:"joueur/add",component:AddjoueurComponent},
   {path:"joueur/edit",component:EditjoueurComponent},
-  { path: "humainRessources", component: HumainRessourcesComponent },
-  { path: "humainRessources/add", component: AddRessourcesComponent },
-  { path: "humainRessources/edit/:id", component: EditRessourcesComponent},
-
-  { path: "clients", component: ClientsComponent },
-  { path: "clients/add", component: AddClientsComponent },
-  { path: "clients/edit/:id", component: EditClientComponent },
-  {path:"facture",component:FactureComponent},
-  { path: "bon-de-commande-client", component : BonDeCommandeComponentClinet},
-  {path:  "add-bon-de-commande", component :AddBonCommandeClientComponent},
-  {path: "bl-client",component: BlclientComponent},
-
-  
+  {path:"visiteur",component:VisiteurComponent}
 
 ];
 

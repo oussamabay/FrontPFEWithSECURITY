@@ -49,5 +49,8 @@ this.alljouer=res ;
   
   })
   }
+  cancel = () => {
+    this.ConfirmationService.close();
+  };
   
 }

@@ -1,0 +1,153 @@
+
+<div class="commandes-states" >
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-10">
+        <!-- Header -->
+        <div class="header mt-md-5">
+          <div class="header-body pt-0">
+            <div class="row align-items-center">
+              <div class="col">
+                <!-- Pretitle -->
+                <!-- Title -->
+                <h1 class="header-title">Statistiques</h1>
+              </div>
+            </div>
+            <!-- / .row -->
+           
+          </div>
+        </div>
+        <div
+          class="row show"
+        >
+          <div class="col-12 col-md-12">
+            <!-- Card -->
+            <div class="card stats-card-content">
+              <div class="card-body">
+               
+
+                <div class="card">
+                  <div class="card-header">
+                    <!-- Title -->
+                    <h4 class="card-header-title d-flex align-items-center">
+                      <i class="las la-leaf leaf"></i>
+                      Classement 
+                    </h4>
+                  </div>
+                  <div class="table-responsive mb-0">
+                    <table
+                      class="
+                        table table-sm table-nowrap
+                        card-table
+                        table-hover
+                        rh-table
+                        overflow-visible
+                      "
+                    >
+                      <thead>
+                        <tr>
+                          <th>Equipe</th>
+                          <th>Points</th>
+                          <th>Nombre de partie</th>
+                          <th>But marquée</th>
+                          <th>But acceptables</th>
+                         
+
+                          
+                        </tr>
+                      </thead>
+                      <tbody class="list">
+                        <tr *ngFor="let u of allclassement" >
+                          <td>{{u.equipe.nom}}</td>
+                          <td>{{u.points}}</td>
+                          <td>{{u.jouer}}</td>
+                          <td>{{u.marque}}</td>
+                          <td>{{u.recu}}</td>
+                         </tr>
+
+                     
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+
+
+
+                
+                <!-- / .row -->
+              </div>
+            </div>
+          </div>
+        
+         
+        </div>
+
+      </div>
+
+      <div class="col-12 col-lg-10 premier-materiel col-xl-10">
+        <div class="header no-border mt-md-5">
+          <div class="header-body pt-0">
+            <div class="row align-items-center">
+              <div class="col">
+                <!-- Pretitle -->
+                <!-- Title -->
+                <h1 class="header-title ">
+Classement buteur                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-lg-6">
+      
+      
+            <div class="table-responsive mb-0">
+              <table
+                class="
+                  table table-sm table-nowrap
+                  card-table
+                  table-hover
+                  rh-table
+                  overflow-visible
+                "
+              >
+                <thead>
+                  <tr>
+                    <th>Nom et Prénom</th>
+                    <th>Nombre de but</th>
+                    <th>Equipe</th>
+                    
+
+                    
+                  </tr>
+                </thead>
+                <tbody class="list">
+                  <tr *ngFor="let u of allclassementbuteur" >
+                    <td>{{u.joueur.nomprenom}}</td>
+                    <td>{{u.nbbut}}</td>
+                    <td>{{u.joueur.equipe.nom}}</td>
+                   </tr>
+
+               
+                  </tbody>
+              </table>
+            </div>
+      
+      
+      
+      
+          </div>
+
+        
+         
+        </div>
+      </div>
+    </div>
+
+    <!-- / .row -->
+  </div>
+</div>
+

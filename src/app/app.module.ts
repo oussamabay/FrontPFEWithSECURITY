@@ -15,15 +15,16 @@ import { AppComponent } from "./app.component";
 
 //interceptors
 import { JwtInterceptor } from "./shared/helpers/jwt.interceptor";
-import { DevisComponent } from './customer/devis/devis.component';
 import { AddequipeComponent } from './admin/equipe/addequipe/addequipe.component';
 import { AddjoueurComponent } from './admin/joueur/addjoueur/addjoueur.component';
 import { EditarbitreComponent } from './admin/arbitre/editarbitre/editarbitre.component';
 import { EdistadeComponent } from './admin/stade/edistade/edistade.component';
 import { EditequipeComponent } from './admin/equipe/editequipe/editequipe.component';
 import { EditjoueurComponent } from './admin/joueur/editjoueur/editjoueur.component';
+import { AddvisiteurComponent } from './auth/addvisiteur/addvisiteur.component';
+import { VisiteurComponent } from './admin/visiteur/visiteur.component';
 @NgModule({
-  declarations: [AppComponent, SidenavComponent, ToastComponent, DevisComponent,],
+  declarations: [AppComponent, SidenavComponent, ToastComponent,],
   imports: [
 
     BrowserModule,
