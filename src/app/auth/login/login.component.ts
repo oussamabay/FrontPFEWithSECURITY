@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   loginform: FormGroup;
   loading = false;
   showPassword = true;
+  visiteur : any ;
 
   constructor(
     private router: Router,
@@ -37,6 +38,7 @@ export class LoginComponent implements OnInit {
     this.showPassword = !this.showPassword;
   }
 
+  
   onLogin() {
     if (this.loginform.status === "INVALID") {
       this.ToastService.warning("le format e-mail/mot de passe n'est pas valide.");
@@ -45,20 +47,36 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     this.authenticationService.login(this.loginform.value).subscribe(
       (data) => {
-        console.log(data.profil)
         if(data.profil=="Admin"){
           this.ToastService.success("Connecté avec succès");
           this.router.navigate(["admin"]);
           this.loading = false;
         }
-      else  if(data.profil=="Customer"){
+      else  if(data.profil=="visiteur"){
+                this.authenticationService.getbyemail(data.email).subscribe((res)=>{
+        this.visiteur =res ;
+      console.log(this.visiteur.activer)
+        if(this.visiteur.activer==false){
+          this.loading = false;
+          this.ToastService.warning("le compte n'as pas encore activer.");
+          this.router.navigate(["authentication/login"]);
+        }else if (this.visiteur.activer==true) {
           this.ToastService.success("Connecté avec succès");
-          this.router.navigate(["customer"]);
-          this.loading = false;        }
-         else if(data.profil=="Gestionnaire_Production"){
-            this.ToastService.success("Connecté avec succès");
-            this.router.navigate(["Gestionnaire_Production"]);
-            this.loading = false;        }
+          this.router.navigate(["visiteur"]);
+          this.loading = false;
+        }
+        
+                })
+      //  this.ToastService.success("Connecté avec succès");
+         // this.router.navigate(["customer"]);
+          //this.loading = false;     
+        
+        
+        }
+        
+
+
+
       },
       (error) => {
         this.loading = false;

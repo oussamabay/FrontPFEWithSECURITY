@@ -20,12 +20,19 @@ export class SidenavComponent implements OnInit {
   expandListFr = false;
   expandListf=false;
 profil : any ;
+visiteur : any 
+status : any ;
   constructor(private AuthenticationService: AuthenticationService) {}
 
   ngOnInit(): void {
 
     const user = JSON.parse(localStorage.getItem('currentUser'));
     this.profil =user.profil
+    this.AuthenticationService.getbyemail(user.email).subscribe((res)=>{
+this.visiteur =res ;
+this.status=this.visiteur.activer ;
+console.log(this.status)
+    })
     console.log(this.profil)
 
   }
