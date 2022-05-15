@@ -17,25 +17,7 @@
     </button>
 
     <div class="navbar-user border-none d-none d-md-flex">
-      <a class="navbar-user-link" role="button" (click)="openNotificationMenu()"
-        ><div class="icon" [ngClass]="{ 'nav-label ': !mainMenuHoverd }">
-          <svg
-            width="17"
-            height="17"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-bell shake-bottom"
-          >
-            <g>
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-            </g>
-          </svg></div
-      ></a>
+     
       <div class="dropup">
         <div
           class="avatar avatar-sm avatar-online dropdown-toggle"
@@ -46,7 +28,7 @@
         >
           <img
             class="avatar-img rounded-circle"
-            src="../../../../../assets/images/avatar.jpg"
+            src="../../../../../assets/images/football2.jpg"
             alt="..."
           />
         </div>
@@ -56,17 +38,7 @@
           class="dropdown-menu profiledropup"
           [ngClass]="{ show: profileMenuOpened }"
         >
-          <a
-            href="/profile-posts"
-            data-rr-ui-dropdown-item=""
-            class="dropdown-item"
-            >Profile</a
-          ><a
-            href="/account-general"
-            data-rr-ui-dropdown-item=""
-            class="dropdown-item"
-            >Paramètre</a
-          >
+         
           <hr class="dropdown-divider" role="separator" />
           <a
             href="/authentication"
@@ -77,29 +49,7 @@
           >
         </div>
       </div>
-      <a
-        class="navbar-user-link"
-        [ngClass]="{ 'nav-label': !mainMenuHoverd }"
-        role="button"
-        (click)="openSearchMenu()"
-        ><div class="icon">
-          <svg
-            width="17"
-            height="17"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-search"
-          >
-            <g>
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </g>
-          </svg></div
-      ></a>
+     
     </div>
 
     <div class="d-md-none dropdown">
@@ -181,6 +131,17 @@
               >
             </a>
           </div>
+          <div class="nav-item">
+            <a routerLink="/admin/port" class="nav-link">
+              <i class="las la-address-book"></i>
+              <span
+                [ngClass]="{ 'nav-label': !mainMenuHoverd }"
+                class="text-nowrap"
+              >
+                Port</span
+              >
+            </a>
+          </div> 
           <div class="nav-item">
             <a routerLink="/admin/visiteur" class="nav-link">
               <i class="las la-address-book"></i>
@@ -350,177 +311,7 @@
   [ngClass]="{ 'show fade search-backdrop': notificationMenuOpened }"
   (click)="hideNotifModal($event)"
 ></div>
-<div
-  role="dialog"
-  aria-modal="true"
-  class="offcanvas offcanvas-start"
-  [ngClass]="{ show: notificationMenuOpened }"
-  tabindex="-1"
-  style="visibility: visible"
->
-  <div class="offcanvas-header">
-    <h4 class="offcanvas-title">Notifications</h4>
-    <div class="modal-header-tabs nav-tabs-sm nav nav-tabs"></div>
-  </div>
-  <div class="offcanvas-body">
-    <div class="list-group-flush list-group-activity my-n3 list-group">
-      <a
-        href="/#!"
-        data-rr-ui-event-key="/#!"
-        class="text-reset list-group-item"
-        ><div class="row">
-          <div class="col-auto">
-            <div class="avatar avatar-sm">
-              <div
-                class="avatar-title fs-lg bg-primary-soft rounded-circle text-primary"
-              >
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-mail"
-                >
-                  <g>
-                    <path
-                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                    ></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="ms-n2 col">
-            <h5 class="mb-1">Launchday 1.4.0 update email sent</h5>
-            <p class="small text-gray-700 mb-0">
-              Sent to all 1,851 subscribers over a 24 hour period
-            </p>
-            <small class="text-muted">2m ago</small>
-          </div>
-        </div></a
-      ><a
-        href="/#!"
-        data-rr-ui-event-key="/#!"
-        class="text-reset list-group-item"
-        ><div class="row">
-          <div class="col-auto">
-            <div class="avatar avatar-sm">
-              <div
-                class="avatar-title fs-lg bg-primary-soft rounded-circle text-primary"
-              >
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-archive"
-                >
-                  <g>
-                    <polyline points="21 8 21 21 3 21 3 8"></polyline>
-                    <rect x="1" y="3" width="22" height="5"></rect>
-                    <line x1="10" y1="12" x2="14" y2="12"></line>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="ms-n2 col">
-            <h5 class="mb-1">New project "Goodkit" created</h5>
-            <p class="small text-gray-700 mb-0">
-              Looks like there might be a new theme soon.
-            </p>
-            <small class="text-muted">2m ago</small>
-          </div>
-        </div></a
-      ><a
-        href="/#!"
-        data-rr-ui-event-key="/#!"
-        class="text-reset list-group-item"
-        ><div class="row">
-          <div class="col-auto">
-            <div class="avatar avatar-sm">
-              <div
-                class="avatar-title fs-lg bg-primary-soft rounded-circle text-primary"
-              >
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-code"
-                >
-                  <g>
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="ms-n2 col">
-            <h5 class="mb-1">Dashkit 1.5.0 was deployed.</h5>
-            <p class="small text-gray-700 mb-0">
-              A successful to deploy to production was executed.
-            </p>
-            <small class="text-muted">2m ago</small>
-          </div>
-        </div></a
-      ><a
-        href="/#!"
-        data-rr-ui-event-key="/#!"
-        class="text-reset list-group-item"
-        ><div class="row">
-          <div class="col-auto">
-            <div class="avatar avatar-sm">
-              <div
-                class="avatar-title fs-lg bg-primary-soft rounded-circle text-primary"
-              >
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-git-branch"
-                >
-                  <g>
-                    <line x1="6" y1="3" x2="6" y2="15"></line>
-                    <circle cx="18" cy="6" r="3"></circle>
-                    <circle cx="6" cy="18" r="3"></circle>
-                    <path d="M18 9a9 9 0 0 1-9 9"></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="ms-n2 col">
-            <h5 class="mb-1">"Update Dependencies" branch was created.</h5>
-            <p class="small text-gray-700 mb-0">
-              This branch was created off of the "master" branch.
-            </p>
-            <small class="text-muted">2m ago</small>
-          </div>
-        </div></a
-      >
-    </div>
-  </div>
-</div>
+
 </div>
 
 
@@ -544,25 +335,7 @@
       </button>
   
       <div class="navbar-user border-none d-none d-md-flex">
-        <a class="navbar-user-link" role="button" (click)="openNotificationMenu()"
-          ><div class="icon" [ngClass]="{ 'nav-label ': !mainMenuHoverd }">
-            <svg
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-bell shake-bottom"
-            >
-              <g>
-                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-              </g>
-            </svg></div
-        ></a>
+      
         <div class="dropup">
           <div
             class="avatar avatar-sm avatar-online dropdown-toggle"
@@ -583,17 +356,7 @@
             class="dropdown-menu profiledropup"
             [ngClass]="{ show: profileMenuOpened }"
           >
-            <a
-              href="/profile-posts"
-              data-rr-ui-dropdown-item=""
-              class="dropdown-item"
-              >Profile</a
-            ><a
-              href="/account-general"
-              data-rr-ui-dropdown-item=""
-              class="dropdown-item"
-              >Paramètre</a
-            >
+           
             <hr class="dropdown-divider" role="separator" />
             <a
               href="/authentication"
@@ -604,29 +367,7 @@
             >
           </div>
         </div>
-        <a
-          class="navbar-user-link"
-          [ngClass]="{ 'nav-label': !mainMenuHoverd }"
-          role="button"
-          (click)="openSearchMenu()"
-          ><div class="icon">
-            <svg
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-search"
-            >
-              <g>
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </g>
-            </svg></div
-        ></a>
+        
       </div>
   
       <div class="d-md-none dropdown">
@@ -651,17 +392,6 @@
           style="left: -100px"
           [ngClass]="{ show: profileMenuOpened }"
         >
-          <a
-            href="/profile-posts"
-            data-rr-ui-dropdown-item=""
-            class="dropdown-item"
-            >Profile</a
-          ><a
-            href="/account-general"
-            data-rr-ui-dropdown-item=""
-            class="dropdown-item"
-            >Paramètre</a
-          >
           <hr class="dropdown-divider" role="separator" />
           <a href="/sign-in" data-rr-ui-dropdown-item="" class="dropdown-item"
             >Deconnexion</a
@@ -708,7 +438,17 @@
                 >
               </a>
             </div>
-           
+            <div class="nav-item">
+              <a routerLink="/visiteur/port" class="nav-link">
+                <i class="las la-address-book"></i>
+                <span
+                  [ngClass]="{ 'nav-label': !mainMenuHoverd }"
+                  class="text-nowrap"
+                >
+                  Port</span
+                >
+              </a>
+            </div> 
   
             <div class="nav-item">
               <a routerLink="/visiteur/arbitre" class="nav-link">

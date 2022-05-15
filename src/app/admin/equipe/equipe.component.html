@@ -97,6 +97,7 @@
                 <th>Nom de l'equipe</th>
                 <th>Date de naissance</th>
                 <th>Entraineur</th>
+                <th>Port</th>
                 <th class="text-center">Actions</th>
 
               </tr>
@@ -106,6 +107,7 @@
                 <td>{{u.nom}}</td>
                 <td>{{u.date | date: "dd/MM/yyyy"}}</td>
                 <td>{{u.entraineur}}</td>
+                <td>{{u.port.name}}</td>
                 <td class="text-center">
                   <button
                   pButton

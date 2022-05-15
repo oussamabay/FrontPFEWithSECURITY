@@ -1,0 +1,87 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-10">
+        <div class="header mt-md-5">
+          <div
+            class="
+              header-body
+              d-flex
+              justify-content-between
+              align-items-center
+              pt-0
+            "
+          >
+            <div class="row align-items-center">
+              <div class="col">
+                <h1 class="header-title">Liste des Ports</h1>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-2"></div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div
+      *ngIf="loading"
+      class="d-flex justify-content-center spinner-container"
+    >
+      <span class="spinner-border spinner-border-sm me-3"></span>
+    </div>
+      <div
+      *ngIf="this.allport==''"
+        class="
+          empty-log
+          d-flex
+          flex-column
+          align-items-center
+          justify-content-center
+        "
+      >
+        <p class="text-center">ajoutez pour commencer</p>
+        <i class="las la-leaf"></i>
+      </div>
+      <div class="col-xl-10">
+       
+        <div class="card">
+          <div class="card-header">
+            <!-- Title -->
+            <h4 class="card-header-title d-flex align-items-center">
+              <i class="las la-leaf leaf"></i>
+              List des Ports
+            </h4>
+          </div>
+          <div class="table-responsive mb-0">
+            <table
+              class="
+                table table-sm table-nowrap
+                card-table
+                table-hover
+                rh-table
+                overflow-visible
+              "
+            >
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th class="text-center">Actions</th>
+  
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr *ngFor= "let u of allport">
+                  <td>{{u.name}}</td>
+                 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

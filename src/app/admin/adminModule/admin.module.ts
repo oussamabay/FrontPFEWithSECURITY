@@ -35,6 +35,8 @@ import { EditequipeComponent } from '../equipe/editequipe/editequipe.component';
 import { EditjoueurComponent } from '../joueur/editjoueur/editjoueur.component';
 import { AddvisiteurComponent } from 'src/app/auth/addvisiteur/addvisiteur.component';
 import { VisiteurComponent } from '../visiteur/visiteur.component';
+import { PortComponent } from "../port/port.component";
+import { AddportComponent } from "../port/addport/addport.component";
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { VisiteurComponent } from '../visiteur/visiteur.component';
     AddpartieComponent,
     ScoreComponent,
     DashboardComponent,
-    VisiteurComponent
+    VisiteurComponent,
+    PortComponent,
+    AddportComponent
   ],
   imports: [
     CommonModule,

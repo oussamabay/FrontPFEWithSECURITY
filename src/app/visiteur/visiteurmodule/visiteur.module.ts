@@ -17,6 +17,7 @@ import { PartieComponent } from "../partie/partie.component";
 import { JoueurComponent } from "../joueur/joueur.component";
 import { EquipeComponent } from "../equipe/equipe.component";
 import { StadeComponent } from "../stade/stade.component";
+import { PortComponent } from "../port/port.component";
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { StadeComponent } from "../stade/stade.component";
       JoueurComponent,
       EquipeComponent,
       StadeComponent,
+      PortComponent,
       DashboardComponent
     ],
     imports: [
