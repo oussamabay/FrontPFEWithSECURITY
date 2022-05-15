@@ -23,6 +23,8 @@ import { EditequipeComponent } from './admin/equipe/editequipe/editequipe.compon
 import { EditjoueurComponent } from './admin/joueur/editjoueur/editjoueur.component';
 import { AddvisiteurComponent } from './auth/addvisiteur/addvisiteur.component';
 import { VisiteurComponent } from './admin/visiteur/visiteur.component';
+import { PortComponent } from './admin/port/port.component';
+import { AddportComponent } from './admin/port/addport/addport.component';
 @NgModule({
   declarations: [AppComponent, SidenavComponent, ToastComponent,],
   imports: [

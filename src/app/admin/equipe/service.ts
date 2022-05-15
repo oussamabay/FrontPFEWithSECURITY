@@ -47,7 +47,7 @@ export class EquipeService {
                return  this.httpClient.post(CONFIG.URL +  "equipe/archiver?id="+id,{ headers: headers, responseType: 'text' })
               }
           
-        addequipe(nom,entraineur,date) {
+        addequipe(nom,entraineur,date,port) {
           const user = JSON.parse(localStorage.getItem('currentUser'));
         
             let headers = new HttpHeaders();
@@ -56,7 +56,7 @@ export class EquipeService {
         
           let contactf= JSON.stringify({date:date,entraineur:entraineur,nom:nom});
             console.log(contactf)
-           return  this.httpClient.post(CONFIG.URL +  "equipe/ajouterequipe",contactf,{ headers: headers, responseType: 'text' })
+           return  this.httpClient.post(CONFIG.URL +  "equipe/ajouterequipe?port="+port,contactf,{ headers: headers, responseType: 'text' })
           }
       
 

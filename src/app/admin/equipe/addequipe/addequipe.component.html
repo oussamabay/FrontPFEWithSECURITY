@@ -35,6 +35,20 @@
                   <div class="form-group col-8">
                     <h2 class="header-title">Equipe :</h2>
                     <hr class="mb-5" />
+                    <label class="form-label">Port</label>
+
+
+                    <select class="form-control"  formControlName="port"
+                    >
+                      <option value="" disabled selected>
+                          selectionner Port
+                        </option>
+                      <option *ngFor="let u of allport" [value]="u.name">{{u.name}}</option>
+
+                   </select> 
+
+<br>
+
                     <label class="form-label">Nom de l'équipe</label>
   
                     <!-- Input -->

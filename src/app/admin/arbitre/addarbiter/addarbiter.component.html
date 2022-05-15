@@ -38,8 +38,12 @@
                     <label class="form-label">Nom et Prénom</label>
   
                     <!-- Input -->
-                    <input type="text" class="form-control" #nomprenomar formControlName="nomprenomar" required
-                    >
+                    <input type="text" class="form-control" #nomprenomar formControlName="nomprenomar" required >
+
+                    <div class="col-md-6 col-md-offset-4 alert-danger "
+                    *ngIf="!FormGroup.controls.nomprenomar.valid && FormGroup.get('nomprenomar').touched && FormGroup.get('nomprenomar').errors.required">
+                    <div class="">Le nom est obligatoire.</div>
+                  </div>
                   </div>
                 </div>
                 <div class="row justify-content-end mb-3">
@@ -49,6 +53,10 @@
   
                     <!-- Input -->
                     <input type="text" class="form-control" #adrar formControlName="adrar" required/>
+                    <div class="col-md-6 col-md-offset-4 alert-danger "
+                    *ngIf="!FormGroup.controls.adrar.valid && FormGroup.get('adrar').touched && FormGroup.get('adrar').errors.required">
+                    <div class="">L'adresse est obligatoire.</div>
+                  </div>
                   </div>
                 </div>
   
@@ -59,6 +67,13 @@
   
                     <!-- Input -->
                     <input type="text" class="form-control" #agear formControlName="agear" required/>
+                  
+                    <div class="col-md-6 col-md-offset-4 alert-danger "
+                    *ngIf="!FormGroup.controls.agear.valid && FormGroup.get('agear').touched && FormGroup.get('agear').errors.required">
+                    <div class="">L'age est obligatoire.</div>
+                  </div>
+                  
+                  
                   </div>
                 </div>
 
@@ -81,11 +96,10 @@
                   </div>
   
                   <div class="col-auto">
-                    <!-- Button -->
-                    <a class="btn btn-lg btn-primary" (click)="addarbiter()"
-                      >Continue</a
-                    >
-                  </div>
+                    <!-- Button --> <button type="submit" class="btn btn-primary first-btn-right" (click)="addarbiter()"
+                  [disabled]="FormGroup.invalid">Enregistrer</button>
+              
+                    </div>
                 </div>
               </div>
             </div>

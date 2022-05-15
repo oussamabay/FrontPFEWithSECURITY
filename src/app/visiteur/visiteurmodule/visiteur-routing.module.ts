@@ -5,6 +5,7 @@ import { DashboardComponent } from "../dashboard/dashboard.component";
 import { EquipeComponent } from "../equipe/equipe.component";
 import { JoueurComponent } from "../joueur/joueur.component";
 import { PartieComponent } from "../partie/partie.component";
+import { PortComponent } from "../port/port.component";
 import { StadeComponent } from "../stade/stade.component";
 const routes: Routes = [
 
@@ -13,7 +14,8 @@ const routes: Routes = [
     {path:"arbitre",component:ArbitreComponent},
     {path:"joueur",component:JoueurComponent},
   {path:"equipe",component:EquipeComponent},
-  {path:"stade",component:StadeComponent}
+  {path:"stade",component:StadeComponent},
+  {path:"port",component:PortComponent}
   ];
 @NgModule({
     imports: [RouterModule.forChild(routes)],
