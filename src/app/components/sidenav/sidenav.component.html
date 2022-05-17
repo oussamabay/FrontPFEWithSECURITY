@@ -1,7 +1,7 @@
 <div *ngIf="this.profil=='Admin'">
 
-<nav
-  class="navbar-vertical fixed-start navbar navbar-expand-md navbar-light custom-sidenav"
+<nav 
+  class="navbar-vertical fixed-start navbar navbar-expand-md navbar-light custom-sidenav background:#000000;"
   (mouseenter)="showNav()"
   (mouseleave)="hideNav()"
   style="overflow-y: scroll !important"
@@ -28,7 +28,7 @@
         >
           <img
             class="avatar-img rounded-circle"
-            src="../../../../../assets/images/avatar.jpg"
+            src='src/assets/images/iconfoot.jpg'
             alt="..."
           />
         </div>
@@ -61,7 +61,7 @@
       >
         <img
           class="avatar-img rounded-circle"
-          src="../../../../../assets/images/avatar.jpg"
+          src="src/assets/images/iconfoot.jpg"
           alt="..."
           (click)="openProfileMenu()"
         />
@@ -125,9 +125,10 @@
             <a routerLink="/admin" class="nav-link">
               <i class="las la-tachometer-alt"></i>
               <span
+              style="color:green"
                 [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                 class="text-nowrap"
-                >Tableau de bord</span
+                ><b>Tableau de bord</b></span
               >
             </a>
           </div>
@@ -135,10 +136,11 @@
             <a routerLink="/admin/port" class="nav-link">
               <i class="las la-address-book"></i>
               <span
+              style="color:green"
                 [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                 class="text-nowrap"
               >
-               Ajouter Port</span
+               <b>Ajouter Port</b></span
               >
             </a>
           </div> 
@@ -146,10 +148,11 @@
             <a routerLink="/admin/visiteur" class="nav-link">
               <i class="las la-address-book"></i>
               <span
+              style="color:green"
                 [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                 class="text-nowrap"
-              >
-                Consulter inscriptions</span
+              ><b>
+                Consulter inscriptions</b></span
               >
             </a>
           </div> 
@@ -158,10 +161,11 @@
             <a routerLink="/admin/arbitre" class="nav-link">
               <i class="las la-address-book"></i>
               <span
+              style="color:green"
                 [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                 class="text-nowrap"
               >
-               Gérer Arbitres</span
+              <b> Gérer Arbitres</b></span
               >
             </a>
           </div> 
@@ -169,10 +173,11 @@
             <a routerLink="/admin/partie" class="nav-link">
               <i class="las la-address-book"></i>
               <span
+              style="color:green"
                 [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                 class="text-nowrap"
               >
-                Gérer Parties</span
+              <b>  Gérer Parties</b></span
               >
             </a>
           </div> 
@@ -181,10 +186,11 @@
             <a routerLink="/admin/joueur" class="nav-link">
               <i class="las la-address-book"></i>
               <span
+              style="color:green"
                 [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                 class="text-nowrap"
               >
-                Gérer Joueurs</span
+              <b>  Gérer Joueurs</b></span
               >
             </a>
           </div>
@@ -193,10 +199,11 @@
             <a routerLink="/admin/equipe" class="nav-link">
               <i class="las la-address-book"></i>
               <span
+              style="color:green"
                 [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                 class="text-nowrap"
               >
-                Gérer Equipes</span
+               <b> Gérer Equipes</b></span
               >
             </a>
           </div>
@@ -204,10 +211,11 @@
             <a routerLink="/admin/stade" class="nav-link">
               <i class="las la-address-book"></i>
               <span
+              style="color:green"
                 [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                 class="text-nowrap"
               >
-                Gérer Stades</span
+               <b> Gérer Stades</b></span
               >
             </a>
           </div>
@@ -272,7 +280,7 @@
             <div class="avatar avatar-1by1">
               <img
                 class="avatar-img rounded"
-                src="../../../../../assets/images/team.jpg"
+                src="src/assets/images/iconfoot.jpg"
                 alt="Airbnb"
               />
             </div>
@@ -346,7 +354,7 @@
           >
             <img
               class="avatar-img rounded-circle"
-              src="../../../../../assets/images/avatar.jpg"
+              src="src/assets/images/iconfoot.jpg"
               alt="..."
             />
           </div>
@@ -379,7 +387,7 @@
         >
           <img
             class="avatar-img rounded-circle"
-            src="../../../../../assets/images/avatar.jpg"
+            src="src/assets/images/iconfoot.jpg"
             alt="..."
             (click)="openProfileMenu()"
           />
@@ -432,6 +440,8 @@
               <a routerLink="/visiteur" class="nav-link">
                 <i class="las la-tachometer-alt"></i>
                 <span
+                style="color:green"
+
                   [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                   class="text-nowrap"
                   >Tableau de bord</span
@@ -442,6 +452,8 @@
               <a routerLink="/visiteur/port" class="nav-link">
                 <i class="las la-address-book"></i>
                 <span
+                style="color:green"
+
                   [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                   class="text-nowrap"
                 >
@@ -454,6 +466,8 @@
               <a routerLink="/visiteur/arbitre" class="nav-link">
                 <i class="las la-address-book"></i>
                 <span
+                style="color:green"
+
                   [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                   class="text-nowrap"
                 >
@@ -465,6 +479,8 @@
               <a routerLink="/visiteur/partie" class="nav-link">
                 <i class="las la-address-book"></i>
                 <span
+                style="color:green"
+
                   [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                   class="text-nowrap"
                 >
@@ -477,6 +493,8 @@
               <a routerLink="/visiteur/joueur" class="nav-link">
                 <i class="las la-address-book"></i>
                 <span
+                style="color:green"
+
                   [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                   class="text-nowrap"
                 >
@@ -489,6 +507,8 @@
               <a routerLink="/visiteur/equipe" class="nav-link">
                 <i class="las la-address-book"></i>
                 <span
+                style="color:green"
+
                   [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                   class="text-nowrap"
                 >
@@ -500,6 +520,8 @@
               <a routerLink="/visiteur/stade" class="nav-link">
                 <i class="las la-address-book"></i>
                 <span
+                style="color:green"
+
                   [ngClass]="{ 'nav-label': !mainMenuHoverd }"
                   class="text-nowrap"
                 >
@@ -568,7 +590,7 @@
               <div class="avatar avatar-1by1">
                 <img
                   class="avatar-img rounded"
-                  src="../../../../../assets/images/team.jpg"
+                  src="src/assets/images/iconfoot.jpg"
                   alt="Airbnb"
                 />
               </div>

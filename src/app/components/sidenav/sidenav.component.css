@@ -2,3 +2,17 @@
     font-size: 30px;
     margin-right: 15px;
 }
+#bg-img {
+  /* The image used */
+  background-image: url("src/assets/image/admin.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
