@@ -26,6 +26,16 @@ export class VisiteurService {
            
              return  this.httpClient.post(CONFIG.URL +  "visiteur/activer?id="+id,{ headers: headers, responseType: 'text' })
             }
-      
+            delete(id) {
+              const user = JSON.parse(localStorage.getItem('currentUser'));
+            
+                let headers = new HttpHeaders();
+              headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+              headers = headers.set("Authorization", 'Bearer ' + user.token);
+            
+             
+               return  this.httpClient.post(CONFIG.URL +  "visiteur/delete?id="+id,{ headers: headers, responseType: 'text' })
+              }
+        
 
     }
