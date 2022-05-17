@@ -102,6 +102,19 @@
                  <td *ngIf="u.activer">
                      activer deja
 </td>
+<td>  <button
+  (click)="
+  DeleteClientModal({
+    id: u.id,
+    archived: false
+  })
+"              
+    pButton
+    pRipple
+    type="button"
+    icon="pi pi-trash"
+    class="p-button-rounded p-button-danger p-button-text"
+  ></button></td>
                 </tr>
               </tbody>
             </table>
@@ -110,3 +123,25 @@
       </div>
     </div>
   </div>
+  <p-confirmDialog class="custom-dialog-confirm" [style]="{ width: '50vw' }">
+    <ng-template pTemplate="footer">
+      <!-- Button -->
+      <button class="btn btn-lg btn-white" type="reset" (click)="cancel()">
+        <i class="las la-times-circle"></i>
+        Annuler
+      </button>
+      <!-- Button -->
+      <button
+        class="btn btn-lg btn-primary"
+        data-toggle="wizard"
+        (click)="supprimer()"
+        [disabled]="loading"
+      >
+        <span
+          *ngIf="loading"
+          class="spinner-border spinner-border-sm me-3"
+        ></span>
+        <i class="las la-trash-alt"></i> Supprimer
+      </button>
+    </ng-template>
+  </p-confirmDialog>
