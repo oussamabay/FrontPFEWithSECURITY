@@ -42,6 +42,12 @@ this.service.addequipe(this.FormGroup.value['nom'],this.FormGroup.value['entrain
       this.router.navigate(["/admin/equipe"]);
     }, 4000);
   }
+  else{
+    this.ToastService.warning("Nom de l'équiê est existe")
+    setTimeout(() => {
+      this.router.navigate(["/admin/equipe"]);
+    }, 4000);
+  }
 
 
 })

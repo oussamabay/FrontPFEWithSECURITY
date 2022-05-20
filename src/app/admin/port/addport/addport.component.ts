@@ -30,6 +30,12 @@ export class AddportComponent implements OnInit {
           this.router.navigate(["/admin/port"]);
         }, 4000);
       }
+      else{
+        this.ToastService.warning("Nom du port existe");
+        setTimeout(() => {
+          this.router.navigate(["/admin/port"]);
+        }, 4000);
+      }
     });
     
 

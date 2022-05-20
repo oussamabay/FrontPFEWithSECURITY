@@ -60,6 +60,11 @@ utilisateur :any ;
         setTimeout(() => {
           this.router.navigate(["/authentication/login"]);
         }, 5000);
+      }else{
+        this.ToastService.warning("email estr existe");
+        setTimeout(() => {
+          this.router.navigate(["/authentication/login"]);
+        }, 5000);
       }
     
     

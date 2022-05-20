@@ -36,6 +36,12 @@ export class AddstadeComponent implements OnInit {
           this.router.navigate(["/admin/stade"]);
         }, 4000);
       }
+      else{
+        this.ToastService.warning("Nom est existe");
+        setTimeout(() => {
+          this.router.navigate(["/admin/stade"]);
+        }, 4000);
+      }
     });
     
 
